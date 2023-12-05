@@ -1,0 +1,14 @@
+{
+  "python.autoComplete.extraPaths": [
+    "/home/michael/ros2_ws/install/itri_lrf_ros2/lib/python3.10/site-packages",
+    "/home/michael/ros2_ws/install/itri_tofcam611_ros2/lib/python3.10/site-packages",
+    "/opt/ros/humble/lib/python3.10/site-packages",
+    "/opt/ros/humble/local/lib/python3.10/dist-packages"
+  ],
+  "python.analysis.extraPaths": [
+    "/home/michael/ros2_ws/install/itri_lrf_ros2/lib/python3.10/site-packages",
+    "/home/michael/ros2_ws/install/itri_tofcam611_ros2/lib/python3.10/site-packages",
+    "/opt/ros/humble/lib/python3.10/site-packages",
+    "/opt/ros/humble/local/lib/python3.10/dist-packages"
+  ]
+}
