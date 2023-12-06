@@ -20,6 +20,7 @@ setup(
     entry_points={
         "console_scripts": [
             "publisher = itri_lrf_ros2.publisher:main",
+            "edge_warning = itri_lrf_ros2.edge_warning:main",
         ],
     },
 )
