@@ -5,7 +5,7 @@ from sensor_msgs.msg import Range
 from . import Lrf
 
 # Port
-PORT = "/dev/bus/usb/001/014"
+PORT = "/dev/ttyUSB0"
 
 
 class Lrf_Laser(Node):
@@ -18,7 +18,7 @@ class Lrf_Laser(Node):
         # set camera settings
         self.laser.laserOn()
         # integration time
-        timer_period = 0.5  # seconds
+        timer_period = 0.005  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
 
     def timer_callback(self):
@@ -31,6 +31,7 @@ class Lrf_Laser(Node):
         msg.max_range = 10.0
         msg.range = self.laser.getDistance() / 1000
         self.publisher_.publish(msg)
+        self.get_logger().info("Publishing: '%s'" % msg.range)
 
 
 def main(args=None):
